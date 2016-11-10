@@ -1,0 +1,15 @@
+extends ../layout
+
+block menu
+    include menu
+block content
+    h2.page-header Лоґін
+    p Увійдіть до аміністративної сторінки
+    form(method='POST', action='/admin/login')
+     .form-group
+      label Лоґн
+      input.form-control(name='login', type='text', placeholder='Лоґін')
+     .form-group
+      label Пароль
+      input.form-control(name='password', type='password', placeholder='Пароль')
+     input.btn.btn-primary(type='submit', name='submit', value='Увійти')
